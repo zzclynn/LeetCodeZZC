@@ -1,0 +1,46 @@
+
+import java.util.*;
+public class ValidParentheses {
+
+	public static boolean isValid(String s) {
+        int length=s.length();
+        if(length == 0){
+        	return false;
+        }
+        Stack st = new Stack();
+        if(s.charAt(0)==']'||s.charAt(0)=='}'||s.charAt(0)==')'){
+        	return false;
+        }
+        st.push(s.charAt(0));
+        for(int i=1;i<length;++i){
+        	if(st.empty() && (s.charAt(i)==']'||s.charAt(i)=='}'||s.charAt(i)==')')){
+        		return false;
+        	}
+        	Character ch = null;
+        	if(!st.empty()){
+            	ch=(Character)st.peek();
+        	}
+        	if(s.charAt(i)==']'&& ch=='['||s.charAt(i)=='}'&& ch=='{'||s.charAt(i)==')'&& ch=='('){
+        		st.pop();
+        	}
+        	else
+        	{
+        		st.push(s.charAt(i));
+        	}
+        }
+        if(st.empty()){
+        	return true;  
+        }
+        else{
+        	return false;
+        }
+         
+    }
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		boolean result=isValid("()[]{}");
+		System.out.println(result);
+	}
+
+}

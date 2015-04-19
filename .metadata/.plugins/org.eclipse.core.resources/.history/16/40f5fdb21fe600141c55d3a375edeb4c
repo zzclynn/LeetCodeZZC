@@ -1,0 +1,30 @@
+
+public class ReverseBits {
+    // you need treat n as an unsigned value
+    public static int reverseBits(int n) {
+    	char[] Bits = Integer.toBinaryString(n).toCharArray();
+    	char[] theBits=new char[32];
+    	for(int i=0;i<Bits.length;i++)
+    	{
+    		theBits[32-Bits.length+i]=Bits[i];
+    	}
+    	char temp;
+    	for(int i=0;i<16;i++)
+    	{
+    		temp=theBits[31-i];
+    		theBits[31-i]=theBits[i];
+    		theBits[i]=temp;
+    	}
+    	String bits=theBits.toString();
+    	int result=Integer.parseInt(bits, 2);
+        return result;
+    }
+    
+    
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		int result=reverseBits(43261596 );
+		System.out.println(result);
+	}
+
+}

@@ -1,0 +1,33 @@
+
+public class CountAndSay {
+
+    public static String countAndSay(int n) {
+        String result="1";
+        for(int i=0;i<n;++i)
+        {
+        	int Length=result.length();
+        	StringBuilder temp=new StringBuilder();
+            int Count=1;
+        	for(int j=0;j<Length;++j){
+                char first=result.charAt(j);
+                while(j<Length-1 && result.charAt(j+1)==first)
+                {
+                	Count++;
+                	j++;
+                }
+    			temp.append(Count);
+    			temp.append(first);
+    			Count=1;
+        	}
+        	result=temp.toString();
+        }
+        return result; 
+    }
+    
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		String result=countAndSay(4);
+		System.out.println(result);
+	}
+
+}

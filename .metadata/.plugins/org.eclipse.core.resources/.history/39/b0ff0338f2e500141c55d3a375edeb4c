@@ -1,0 +1,48 @@
+
+public class ValidParentheses {
+
+    public static boolean isValid(String s) {
+        int length=s.length();
+        for(int i=0;i<length;i++){
+        	if(s.charAt(i)=='('){
+        		if(i==length-1){
+        			return false;
+        		}
+        		i++;
+        		if(s.charAt(i)!=')'){
+        			return false;
+        		}        			
+        	}
+        	else if(s.charAt(i)=='['){
+        		if(i==length-1){
+        			return false;
+        		}
+        		i++;
+        		if(s.charAt(i)!=']'){
+        			return false;
+        		}        			
+        	}
+        	else if(s.charAt(i)=='{'){
+        		if(i==length-1){
+        			return false;
+        		}
+        		i++;
+        		if(s.charAt(i)!='}'){
+        			return false;
+        		}        			
+        	}
+        	else{
+        		return false;
+        	}
+        }
+        return true;
+    }
+    
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		boolean result=isValid("[]()[][][]{}");
+		System.out.println(result);
+	}
+
+}

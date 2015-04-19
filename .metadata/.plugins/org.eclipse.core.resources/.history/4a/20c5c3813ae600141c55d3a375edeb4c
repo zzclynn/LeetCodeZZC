@@ -1,0 +1,22 @@
+
+public class RotateArray {
+    public static int[] rotate(int[] nums, int k) {
+        int length=nums.length;
+        int[] buffer=new int[length];
+        int step=k % length;
+        for(int i=0;i<step;++i){
+        	buffer[i]=nums[length-step+i];
+        }
+        for(int i=step;i<length;++i){
+        	buffer[i]=nums[i-step];
+        }
+        return buffer;
+    }
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		int[] x=new int[]{1,2,3,4,5,6,7,8,9,0};
+		int[] y=rotate(x,4 );
+		//System.out.println(result);
+	}
+
+}

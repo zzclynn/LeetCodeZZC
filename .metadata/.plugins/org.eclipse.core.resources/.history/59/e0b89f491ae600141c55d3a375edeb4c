@@ -1,0 +1,14 @@
+
+public class Number1bits {
+
+    public int hammingWeight(int n) {
+    	
+        return 0;
+    }
+    
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		int result=hammingWeight(2);
+		System.out.println(result);
+	}
+}

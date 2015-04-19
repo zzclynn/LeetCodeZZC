@@ -1,0 +1,50 @@
+import java.util.Arrays;
+public class RotateArray {
+    public static int[] rotate(int[] nums, int k) {
+        int length=nums.length;
+        int step=k % length;
+        int temp;
+
+        int start=0;
+        int end=length;
+        while(start<end)
+        {
+        	temp=nums[end-1];
+        	nums[end-1]=nums[start];
+        	nums[start]=temp;
+        	start++;
+        	end--;
+        }
+        
+        start=0;
+        end=k;
+        while(start<end)
+        {
+        	temp=nums[end-1];
+        	nums[end-1]=nums[start];
+        	nums[start]=temp;
+        	start++;
+        	end--;
+        }
+        
+        start=k;
+        end=length;
+        while(start<end)
+        {
+        	temp=nums[end-1];
+        	nums[end-1]=nums[start];
+        	nums[start]=temp;
+        	start++;
+        	end--;
+        }
+        
+        return nums;
+    }
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		int[] x=new int[]{1,2};
+		int[] y=rotate(x,1 );
+		System.out.println(Arrays.toString(y));
+	}
+
+}

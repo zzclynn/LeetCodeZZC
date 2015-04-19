@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">&#x0A;<refactoring comment="Delete resource &apos;Valid_Parentheses&apos;" deleteContents="false" description="Delete resource &apos;Valid_Parentheses&apos;" element1="/Valid_Parentheses" flags="7" id="org.eclipse.ltk.core.refactoring.delete.resources" resources="1" stamp="1429414648333"/>&#x0A;<refactoring comment="Delete resource &apos;CountandSay&apos;" deleteContents="false" description="Delete resource &apos;CountandSay&apos;" element1="/CountandSay" flags="7" id="org.eclipse.ltk.core.refactoring.delete.resources" resources="1" stamp="1429414654469"/>
+</session>
